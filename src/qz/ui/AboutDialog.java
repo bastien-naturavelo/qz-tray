@@ -153,22 +153,24 @@ public class AboutDialog extends BasicDialog implements Themeable {
     }
 
     private void checkForUpdate() {
-        Version latestVersion = AboutInfo.findLatestVersion();
-        if (latestVersion.greaterThan(Constants.VERSION)) {
-            lblUpdate.setText("An update is available:");
+		lblUpdate.setText("You have the single special version made by YoYo for everyone.");
+        updateButton.setVisible(false);
+        //Version latestVersion = AboutInfo.findLatestVersion();
+        //if (latestVersion.greaterThan(Constants.VERSION)) {
+        //    lblUpdate.setText("An update is available:");
 
-            updateButton.setText("Download " + latestVersion.toString());
-            updateButton.setVisible(true);
-        } else if (latestVersion.lessThan(Constants.VERSION)) {
-            lblUpdate.setText("You are on a beta release.");
-
-            updateButton.setText("Revert to stable " + latestVersion.toString());
-            updateButton.setVisible(true);
-        } else {
-            lblUpdate.setText("You have the latest version.");
-
-            updateButton.setVisible(false);
-        }
+        //    updateButton.setText("Download " + latestVersion.toString());
+        //    updateButton.setVisible(true);
+        //} else if (latestVersion.lessThan(Constants.VERSION)) {
+        //    lblUpdate.setText("You are on a beta release.");
+//
+        //    updateButton.setText("Revert to stable " + latestVersion.toString());
+        //    updateButton.setVisible(true);
+        //} else {
+        //    lblUpdate.setText("You have the latest version.");
+//
+        //    updateButton.setVisible(false);
+        //}
     }
 
 
